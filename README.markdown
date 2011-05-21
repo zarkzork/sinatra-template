@@ -1,4 +1,4 @@
-= Sinatra template =
+# Sinatra template #
 
 Collection of best sinatra plugins and some basic configuration for
 developing sinatra apps.
