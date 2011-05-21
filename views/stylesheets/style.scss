@@ -1,0 +1,19 @@
+@import "partials/base";
+
+@import "960/grid";
+@import "html5-boilerplate";
+
+
+@include html5-boilerplate-reset;
+@include html5-boilerplate-fonts;
+@include html5-boilerplate-styles;
+@include html5-boilerplate-helpers;
+
+// Or, you can import the "overrides" partial if
+// you want more control over individual mixins
+//@import "partials/overrides";
+
+@import "partials/fonts";
+@import "partials/page";
+
+@import "partials/media";

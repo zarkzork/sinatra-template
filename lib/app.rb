@@ -2,22 +2,22 @@
 libdir = File.dirname(__FILE__)
 $LOAD_PATH.unshift(libdir) unless $LOAD_PATH.include?(libdir)
 
-require 'rack'
-require 'sinatra/base'
-
+require 'sinatra_config'
 
 class App < Sinatra::Base
-
-  configure do
-    enable :methodoverride
-  end
-
-  set :session, true
-  use Rack::Session::Cookie
+  include SinatraConfig
 
   before do
   end
 
-  # app routes here
+  get '/' do
+    flash.now[:info] = "I'm a flash!"
+    haml :main
+  end
+  
+  # warden authentication fail
+  post '/unauthenticated/?' do
+    halt 401, 'go away'
+  end
 
 end

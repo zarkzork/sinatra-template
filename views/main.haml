@@ -1,0 +1,7 @@
+- content_for(:scripts) do
+  %script{:src => "/js/main.js?v=1"}
+%section    
+  %h1 Welcome to you brand new sinatra app    
+  %p Good Luck Have Fun.
+  - if flash[:info]
+    %p= flash[:info]

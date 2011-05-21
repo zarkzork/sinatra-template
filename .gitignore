@@ -1,0 +1,6 @@
+*.swn
+*.swp
+*.db
+*.swo
+.#*
+.sass-cache
